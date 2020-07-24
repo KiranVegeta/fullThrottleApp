@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import mockObject from './misc/mockApiData';
+import Card from '../src/models/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { 
+      data: mockObject
+    }
+  }
+
+  render() {
+    return (
+      <div class="container">
+        <h1 class="text-muted">Users</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm">
+        {this.state.data.members.map((user) => (
+            <Card member={user}/>
+        ))}
+      </div>
+      </div>
+    );
+  }
 }
 
 export default App;

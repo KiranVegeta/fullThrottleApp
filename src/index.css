@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.set-top-alert {
+  padding-bottom: 50px;
+}
+
+.swal-title {
+  margin: 0px;
+  font-size: 20px;
+  box-shadow: 0px 1px 1px ;
+  margin-bottom: 20px;
+  align-self: top;
+  text-align: left;
+  margin-top: 0 !important;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.iconStyle {
+  font-size:22px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.iconStyle:hover {
+  fill: lightblue;
+} 
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.card:hover {
+  border-radius: .50rem;
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.profile-image {
+  width: 100px;
+  margin-top:-65px
+}
+
+.swal2-overflow {
+  overflow-x: visible;
+  overflow-y: visible;
+}
