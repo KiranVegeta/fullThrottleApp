@@ -9,7 +9,7 @@ function toDate(dateArray) {
  /**Compares between the selected date and the available activity periods. */
 const compareAndList = (activity_periods, selectedDate) => {
      var resultString = "";
-     activity_periods.foreach((period) => {
+     activity_periods.map((period) => {
          const time = toDate(period.start_time.split(' ')),
          year = time.getUTCFullYear(),
          month = time.getUTCMonth(),
@@ -25,6 +25,7 @@ const compareAndList = (activity_periods, selectedDate) => {
          }
      })
      // Update the DOM with the time ranges for the selected date.
+     console.log(resultString);
      document.getElementById("content").innerHTML = resultString;
  
  }
